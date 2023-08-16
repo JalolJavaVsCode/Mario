@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2E8A57;
+    margin: 0;
+}
+
+.box__top {
+    height: 280px;
+    background-color: #87CEEA;
+}
+
+.box__top::before {
+    display: block;
+    width: 400px;
+    height: 300px;
+    background-image: url(./img/cloud.png);
+    background-repeat: no-repeat;
+    content: "";
+}
+
+
+.box__link:hover {
+    background-color: #62f600;
+    color: black;
+}
+
+.box__link {
+    display: inline-block;
+    text-decoration: none;
+    font-family: sans-serif;
+    background-color: #9ACD32;
+    color: black;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 140px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+.box__link:active {
+    opacity: 0.6;
+    color: black;
+}
+
+.box__bottom {
+    position: relative;
+    height: 186px;
+    background-color: #696969;
+    border-top: 16px solid #808080;
+    border-bottom: 16px solid #808080;
+}
+
+.box__bottom::before {
+    position: absolute;
+    background-image: url(/img/mario.png);
+    background-repeat: no-repeat;
+    content: "";
+    z-index: 10;
+    width: 120px;
+    height: 150px;
+    transition: transform 2s ease;
+    margin-top: -80px;
+}
+
+.box__bottom::after {
+    width: 1520px;
+    height: 0px;
+    border: 5px dashed white;
+    background-repeat: no-repeat;
+    content: "";
+    transition: transform 5s ease;
+    position: absolute;
+    bottom: 80px;
+}
+
+
+
+
+.box__bottom__two::before{
+    position: absolute;
+    background-image: url(/img/luigi.png);
+    background-repeat: no-repeat;
+    content: "";
+    z-index: 10;
+    width: 120px;
+    height: 150px;
+    transition: transform 2s ease;
+    margin-top: -160px;
+}
+
+
+
+.box__bottom__two::after{
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    /* width: 30px;
+    height: 152px;
+    background-color: #fff;
+    border: 2px solid #000; */
+    content: "Finish";
+    transform: rotate(-270deg);
+    font-family: sans-serif;
+    font-weight: 900;
+    margin-top: -111px;
+    margin-left: 1350px;
+}
+
+
+
+.box__link__two {
+    display: inline-block;
+    position: absolute;
+    text-decoration: none;
+    font-family: sans-serif;
+    background-color: #9ACD32;
+    color: black;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: -295px;
+    margin-bottom: 10px;
+    margin-left: 400px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+
+.box__link__two:hover {
+    background-color: #62f600;
+    color: black;
+}
+
+
+.box__link__two:active {
+    opacity: 0.6;
+    color: black;
+}
+
+
+
+.box__link:active + .box__bottom::before {
+    transform: translateX(1410px);
+}
+
+
+.box__link__two:active + .box__bottom__two::before{
+    transform: translateX(1410px);
+}
